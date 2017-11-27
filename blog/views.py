@@ -8,8 +8,9 @@ from .models import Post
 # Create your views here.
 def post_list(request):
 	#published_date 기준으로 정리해준다.
-	posts=Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    #posts=Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list.html', {})
+    #return render(request, 'blog/post_list.html', {})
                                                   #템플릿을 추가하기 위해 매개변수를 추가
 
 
